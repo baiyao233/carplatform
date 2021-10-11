@@ -14,7 +14,7 @@ client.on('ready', function(res) {
   console.log('redis ready');
 });
 client.on('error', function(res) {
-  console.log("redis connection error!!!");
+  // console.log("redis connection error!!!");
 	try{
 		client.on('ready', function(res) {
       console.log("ready reconnection successfully");

@@ -4,6 +4,8 @@ import login from '../pages/login'
 import home from '../components/common/home'
 import notFound from '../pages/not-found'
 import dashboard from '../pages/Dashboard'
+import BaseTable from '../pages/BaseTable.vue'
+import Upload from '../pages/Upload.vue'
 
 Vue.use(Router)
 
@@ -21,18 +23,18 @@ export default new Router({
             children: [
                 {
                     path: '/dashboard',
-                    component: () => import(/* webpackChunkName: "dashboard" */ '../pages/Dashboard.vue'),
+                    component: dashboard,
                     meta: {title: '系统首页'}
                 },
                 {
                     path: '/table',
-                    component: () => import(/* webpackChunkName: "table" */ '../pages/BaseTable.vue'),
+                    component: BaseTable,
                     meta: {title: '基础表格'}
                 },
                 {
                     // 图片上传组件
                     path: '/upload',
-                    component: () => import(/* webpackChunkName: "upload" */ '../pages/Upload.vue'),
+                    component: Upload,
                     meta: {title: '文件上传'}
                 }
             ]
@@ -43,9 +45,9 @@ export default new Router({
             component: notFound
         },
         {
-            path: '/login',
-            name: 'login',
-            component: login
+            path: '/dashboard',
+            name: 'dashboard',
+            component: dashboard
         }
 
     ]
