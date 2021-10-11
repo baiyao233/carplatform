@@ -1,0 +1,16 @@
+/*common*/
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden; zoom: 1;}
+.pull-left{float: left;}
+.pull-right{float: right;}
+/*page*/
+.page-bg{padding: 24px;}
+.page-content{background: #fff;padding: 0px 32px 16px;min-height: calc(100vh - 48px);}
+/*搜索行*/
+.search-line{padding:24px 0 24px 0;}
+.search-line .el-form-item{margin-bottom:0}
+
+/*pagination*/
+.page-num{text-align: right; margin-top: 32px;}
+
+/* table 操作竖线 */
+.span-line {margin: 0 0 0 4px;color: #1890ff;}

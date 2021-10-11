@@ -1,0 +1,9 @@
+.error-page{ background: #F0F2F5; height: 100%; width: 100%; position: fixed;top:0;left:0; right:0; bottom:0 }
+.error-page-inner{width:700px; margin: 0 auto;    height: 280px;    margin-top: calc(30vh);}
+.error-page::after{clear:both;  content: " ";  display: table;}
+.error-page .error-left{float: left; width: 230px;}
+.error-page .error-right{float: right}
+.error-page .error-cn{color:#333; margin-top: 46px;    letter-spacing: 10px;    font-weight: bolder;    font-size: 14px;}
+.error-page .error-en{color:#999; margin-top: 10px;}
+.error-page .error-btn{    display: inline-block;    width: 122px;    line-height: 44px;    font-size: 15px;    color: #508BEA;    border-radius: 22px;    background: rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 13px 25px 0px rgba(86, 102, 194, .17);    box-shadow: 0px 13px 25px 0px rgba(86, 102, 194, .17);    text-align: center;    font-weight: 400;margin-top:40px;}
