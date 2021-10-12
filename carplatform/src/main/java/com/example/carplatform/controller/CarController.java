@@ -1,5 +1,6 @@
 package com.example.carplatform.controller;
 
+import com.example.carplatform.query.CarQuery;
 import com.example.carplatform.service.CarService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +27,7 @@ public class CarController {
     @GetMapping("/")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public ResponseEntity<?> test(){
-        return carService.test();
+    public ResponseEntity<?> findList(CarQuery query){
+        return carService.findList(query);
     }
 }

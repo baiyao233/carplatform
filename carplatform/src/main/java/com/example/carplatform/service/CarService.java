@@ -1,5 +1,6 @@
 package com.example.carplatform.service;
 
+import com.example.carplatform.query.CarQuery;
 import org.springframework.http.ResponseEntity;
 
 /**
@@ -9,8 +10,10 @@ import org.springframework.http.ResponseEntity;
  */
 public interface CarService {
     /**
-     * 测试
-     * @return Response
+     * 查询车型列表
+     *
+     * @param query 查询条件
+     * @return ResponseEntity
      */
-    ResponseEntity<?> test();
+    ResponseEntity<?> findList(CarQuery query);
 }

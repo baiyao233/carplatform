@@ -8,7 +8,7 @@ spring:
 # MyBatis
 mybatis:
   # 搜索指定包名
-  type-aliases-package: com.oristand.b2b.manage.db.mysql.domain
+  type-aliases-package: com.example.carplatform.entity
   # 配置mapper的扫描，找到所有的mapper.xml映射文件
   mapper-locations: classpath*:mapper/**/*Mapper.xml
   # 加载全局的配置文件
