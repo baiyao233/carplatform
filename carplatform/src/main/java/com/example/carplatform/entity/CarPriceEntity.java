@@ -1,5 +1,7 @@
 package com.example.carplatform.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -10,12 +12,14 @@ import java.math.BigDecimal;
  * @description
  */
 @Data
+@TableName("car_price")
 public class CarPriceEntity {
+    @TableId
     private Integer id;
     /**
      * 车型
      */
-    private String name;
+    private String carName;
     /**
      * 指导价
      */

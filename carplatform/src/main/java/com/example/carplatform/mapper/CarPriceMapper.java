@@ -1,10 +1,10 @@
 package com.example.carplatform.mapper;
 
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.carplatform.entity.CarPriceEntity;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.util.List;
 
 /**
  * @author baiyao
@@ -12,6 +12,5 @@ import java.util.List;
  * @description CarPriceMapper
  */
 @Mapper
-public interface CarPriceMapper{
-    List<CarPriceEntity> findAll();
+public interface CarPriceMapper extends BaseMapper<CarPriceEntity> {
 }
