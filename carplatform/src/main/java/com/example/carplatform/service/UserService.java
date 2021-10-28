@@ -1,7 +1,10 @@
 package com.example.carplatform.service;
 
+import com.example.carplatform.dto.CreateUserDTO;
 import com.example.carplatform.entity.SysUserEntity;
 import org.springframework.http.ResponseEntity;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author baiyao
@@ -13,8 +16,17 @@ public interface UserService {
     /**
      * 新增用户
      *
-     * @param userEntity 用户
+     * @param user 用户
+     * @param request http流
      * @return ResponseEntity<?>
      */
-    ResponseEntity<?> addUser(SysUserEntity userEntity);
+    ResponseEntity<?> addUser(CreateUserDTO user, HttpServletRequest request);
+
+    /**
+     * 获取当前登录用户
+     *
+     * @param request http流
+     * @return ResponseEntity<?>
+     */
+    ResponseEntity<?> getCurrentUser(HttpServletRequest request);
 }

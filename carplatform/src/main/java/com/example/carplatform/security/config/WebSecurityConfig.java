@@ -65,8 +65,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         return o;
                     }
                 })
-                .antMatchers("/getUser")
-                .hasAnyAuthority("query_user")
                 // 登出
                 .and().logout()
                 .permitAll()

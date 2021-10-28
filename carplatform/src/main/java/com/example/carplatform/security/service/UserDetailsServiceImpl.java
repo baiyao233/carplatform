@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -59,7 +60,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         List<SysPermissionEntity> sysPermissionEntities = userMapper.getPermissionByUserId(user.getId());
-        sysPermissionEntities.forEach(data -> {
+        sysPermissionEntities.stream().filter(Objects::nonNull).forEach(data -> {
             GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(data.getPermissionCode());
             grantedAuthorities.add(grantedAuthority);
         });

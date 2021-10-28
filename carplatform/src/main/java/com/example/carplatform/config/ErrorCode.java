@@ -97,7 +97,7 @@ public enum ErrorCode {
     }
 
     public String getErrorCode(String context, String parameter) {
-        return new StringBuilder(errorCode).append(".").append(context).append(".").append(parameter).toString();
+        return errorCode + "." + context + "." + parameter;
     }
 
     public void setErrorCode(String errorCode) {
