@@ -3,7 +3,7 @@
  */
 const setting = {
   // 开发以及部署时的URL
-  publicPath: '',
+  publicPath: 'http://localhost:8080',
   // 生产环境构建文件的目录名
   outputDir: 'dist',
   // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
@@ -13,9 +13,9 @@ const setting = {
   // 进行编译的依赖
   transpileDependencies: [],
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: 'vue-admin-beautiful-pro',
+  title: '汽车价格管理平台',
   //简写
-  abbreviation: 'vab',
+  abbreviation: 'cp',
   //开发环境端口号
   devPort: '3001',
   //版本号
@@ -37,7 +37,7 @@ const setting = {
   //token名称
   tokenName: 'accessToken',
   //token在localStorage、sessionStorage存储的key的名称
-  tokenTableName: 'vue-admin-beautiful-2021',
+  tokenTableName: 'carview',
   //token存储位置localStorage sessionStorage
   storage: 'localStorage',
   //token失效回退到登录页时是否记录本次的路由
@@ -65,6 +65,6 @@ const setting = {
   //代码生成机生成在view下的文件夹名称
   templateFolder: 'project',
   //是否显示终端donation打印
-  donation: true,
+  donation: false,
 }
 module.exports = setting

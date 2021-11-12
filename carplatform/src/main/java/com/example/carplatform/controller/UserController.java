@@ -1,5 +1,6 @@
 package com.example.carplatform.controller;
 
+import com.example.carplatform.config.SystemConfig;
 import com.example.carplatform.dto.CreateUserDTO;
 import com.example.carplatform.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -29,4 +30,5 @@ public class UserController {
     public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
         return userService.getCurrentUser(request);
     }
+
 }
