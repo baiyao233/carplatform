@@ -41,4 +41,5 @@ nacos:
     data-ids: example,system-config.yaml
     username: nacos
     password: nacos
-
+log:
+  filePath: carplatform
