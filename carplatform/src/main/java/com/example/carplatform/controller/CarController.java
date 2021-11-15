@@ -1,5 +1,6 @@
 package com.example.carplatform.controller;
 
+import com.example.carplatform.config.SystemConfig;
 import com.example.carplatform.query.CarQuery;
 import com.example.carplatform.service.CarService;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +21,16 @@ import javax.annotation.Resource;
 public class CarController {
     @Resource
     private CarService carService;
+    @Resource
+    private SystemConfig systemConfig;
 
     @GetMapping("/")
     public ResponseEntity<?> findList(CarQuery query) {
         return carService.findList(query);
+    }
+
+    @GetMapping("/test")
+    public ResponseEntity<?> testJenkins(){
+        return ResponseEntity.ok(systemConfig);
     }
 }
